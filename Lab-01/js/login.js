@@ -12,8 +12,8 @@ function validation_alert(ptext) {
 function login() {
     let user_input = document.getElementById("email").value;
     let pass_input = document.getElementById("password").value;
-    let username = "Usuario1";
-    let password = "HolaMundo1";
+    let username = "SamEsther@UPatito.com";
+    let password = "12345";
     let input = [user_input, pass_input];
     let input_id = ["email", "password"];
     let error_count = 0;
@@ -38,7 +38,7 @@ function login() {
                 html: '<iframe width="320" height="240" src="https://lottie.host/embed/73b38bb2-617f-4f40-9bd5-b8875381cccf/7yWANscWcu.json"></iframe><br><br><p>Espera un momento</p>',
 
             }).then(() => {
-                document.location.href = "index.html", "blank";
+                document.location.href = "prematricula.html", "blank";
             });
         } else {
             text = "Usuario o contraseña incorrectos. Vuelve a intentar";
