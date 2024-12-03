@@ -1,29 +1,29 @@
 // Function to toggle button visibility based on login status
 function updateNavButtons() {
-    const userData = JSON.parse(localStorage.getItem('user'));
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     const loginBtn = document.getElementById('loginBtn');
     const signupBtn = document.getElementById('signupBtn');
     const accountBtn = document.getElementById('accountBtn');
     const logoutBtn = document.getElementById('logoutBtn');
 
-    if (userData) {
+    if (loggedInUser) {
         // User is logged in
         loginBtn.style.display = 'none';
         signupBtn.style.display = 'none';
-        accountBtn.style.display = 'block';
-        logoutBtn.style.display = 'block'; 
+        accountBtn.style.display = 'block';  // Show account button
+        logoutBtn.style.display = 'block';  // Show logout button
     } else {
         // User is not logged in
-        loginBtn.style.display = 'block';
-        signupBtn.style.display = 'block';
-        accountBtn.style.display = 'none';
-        logoutBtn.style.display = 'none';
+        loginBtn.style.display = 'block';  // Show login button
+        signupBtn.style.display = 'block';  // Show signup button
+        accountBtn.style.display = 'none';  // Hide account button
+        logoutBtn.style.display = 'none';  // Hide logout button
     }
 }
 
 window.onload = updateNavButtons;
 
 document.getElementById('logoutBtn').addEventListener('click', function() {
-    localStorage.removeItem('user');
-    window.location.href = 'signin.html';
+    localStorage.removeItem('loggedInUser');  
+    window.location.href = 'signin.html'; 
 });

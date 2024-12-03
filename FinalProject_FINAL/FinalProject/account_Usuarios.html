@@ -102,55 +102,24 @@
 			</div>
 			<div class="col-lg-8 col-xl-9 ps-lg-4 ps-xl-6">
 				<div class="d-flex justify-content-between align-items-center mb-5 mb-sm-6">
-					<h1 class="h3 mb-0">Trabajos Registrados</h1>
+					<h1 class="h3 mb-0">Usuarios Registrados</h1>
 					<button class="btn btn-primary d-lg-none flex-shrink-0 ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
 						<i class="fas fa-sliders-h"></i> Menu
 					</button>
 				</div>
 				<div class="table-responsive border-0">
-					<table class="table align-middle p-4 mb-0 table-hover" id="TableJobs">
-						<thead class="thead-dark">
-							<tr>
-								<th scope="col" class="border-0 text-white rounded-start">Puesto</th>
-								<th scope="col" class="border-0 text-white">Empresa</th>
-								<th scope="col" class="border-0 text-white">Categoria</th>
+                    <table class="table align-middle p-4 mb-0 table-hover" id="MasterAdminUsers">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" class="border-0 text-white rounded-start" id="nameAdmin">Nombre</th>
+                                <th scope="col" class="border-0 text-white" id="emailAdmin">Email</th>
+                                <th scope="col" class="border-0 text-white" id="catAdmin">Categoria</th>
                                 <th scope="col" class="border-0 text-white rounded-end">Acción</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td>
-                                    <button class="btn btn-sm btn-dark me-1 mb-1 mb-md-0 edit-btn" style="display: none;">
-                                        <i class="bi bi-pencil-square"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-danger me-1 mb-1 mb-md-0 delete-btn" style="display: none;">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td></td>
-							</tr>
-						</tbody>
-					</table>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody1">
+                        </tbody>
+                    </table>                    
 				</div>
 			</div>
 		</div>
@@ -184,6 +153,7 @@
     <script src="js/accountDetails.js"></script>
     <script src="js/accountJobs.js"></script>
     <script src="js/accountDetailsMenu.js"></script>
+    <script src="js/accountAdminMaster.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

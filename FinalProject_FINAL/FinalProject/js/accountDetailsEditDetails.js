@@ -1,20 +1,16 @@
 // On page load, populate input fields from localStorage
 window.addEventListener('DOMContentLoaded', (event) => {
-    const storedData = JSON.parse(localStorage.getItem('user'));
+    const storedData = JSON.parse(localStorage.getItem('loggedInUser'));  // Fetch logged-in user data
 
     if (storedData) {
-        
-        const parts = storedData.nombre.split(' ');
-        const nombre = parts[0];
-        const apellido = parts.slice(1).join(' ');
-        document.getElementById('Nombre1').value = nombre || '';
-        document.getElementById('Apellido1').value = apellido || '';
-        document.getElementById('Correo1').value = storedData.correo || '';
-        document.getElementById('Phone1').value = storedData.telefono || '';
+        document.getElementById('Nombre1').value = storedData.name || '';
+        document.getElementById('Apellido1').value = storedData.surname || '';
+        document.getElementById('Correo1').value = storedData.email || '';
+        document.getElementById('Phone1').value = storedData.phone || '';
     }
 });
 
-// Logica para guardar los datos nuevos
+// Logic to save new data
 document.getElementById('saveButton1').addEventListener('click', function() {
     const nameInput = document.getElementById('Nombre1');
     const surnameInput = document.getElementById('Apellido1');
@@ -23,13 +19,13 @@ document.getElementById('saveButton1').addEventListener('click', function() {
     
     let isValid = true;
 
-
+    // Reset validation styles
     nameInput.classList.remove('is-invalid');
     surnameInput.classList.remove('is-invalid');
     phoneInput.classList.remove('is-invalid');
     emailInput.classList.remove('is-invalid');
     
-
+    // Validate fields
     if (!nameInput.value) {
         nameInput.classList.add('is-invalid');
         isValid = false;
@@ -50,39 +46,40 @@ document.getElementById('saveButton1').addEventListener('click', function() {
         isValid = false;
     }
 
-
+    // If data is valid, update the user in localStorage
     if (isValid) {
         const updatedUserData = {
             name: nameInput.value,
             surname: surnameInput.value,
             phone: phoneInput.value,
-            email: emailInput.value
+            email: emailInput.value,
+            userType: JSON.parse(localStorage.getItem('loggedInUser')).userType  // Keep userType unchanged
         };
 
+        // Save updated user data to localStorage
+        localStorage.setItem('loggedInUser', JSON.stringify(updatedUserData));
 
-        localStorage.setItem('user', JSON.stringify(updatedUserData));
-
-       Swal.fire({
-        toast: true,
-        position: 'top-end',
-        icon: 'success',
-        title: 'Datos guardados correctamente!',
-        showConfirmButton: false,
-        timer: 1500,
-        timerProgressBar: true
-    }).then(() => {
-        location.reload();
-    });
-} else {
-
-    Swal.fire({
-        toast: true,
-        position: 'top-end',
-        icon: 'error',
-        title: 'Por favor, completa todos los campos correctamente.',
-        showConfirmButton: false,
-        timer: 2000,
-        timerProgressBar: true
-    });
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'success',
+            title: 'Datos guardados correctamente!',
+            showConfirmButton: false,
+            timer: 1500,
+            timerProgressBar: true
+        }).then(() => {
+            location.reload();  // Reload the page to reflect the changes
+        });
+    } else {
+        // Show an error if validation fails
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'error',
+            title: 'Por favor, completa todos los campos correctamente.',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true
+        });
     }
 });
