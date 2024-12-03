@@ -86,7 +86,7 @@
 										<a class="nav-link" href="account_applications.html"><i class="bi bi-shield-lock fa-fw me-2"></i>Mis aplicaciones</a>
 									</li>
                                     <li class="nav-item">
-										<a class="nav-link" href="account_CreateAJob.html"><i class="bi bi-file-earmark-plus-fill fa-fw me-2"></i>Crear un puesto</a>
+										<a class="nav-link active" href="account_CreateAJob.html"><i class="bi bi-file-earmark-plus-fill fa-fw me-2"></i>Crear un puesto</a>
 									</li>	
 									<li class="nav-item">
 										<a class="nav-link" href="account_jobs.html"><i class="bi bi-bell fa-fw me-2"></i>Trabajos Registrados</a>
@@ -102,55 +102,129 @@
 			</div>
 			<div class="col-lg-8 col-xl-9 ps-lg-4 ps-xl-6">
 				<div class="d-flex justify-content-between align-items-center mb-5 mb-sm-6">
-					<h1 class="h3 mb-0">Trabajos Registrados</h1>
+					<h1 class="h3 mb-0">Crear un puesto</h1>
 					<button class="btn btn-primary d-lg-none flex-shrink-0 ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
 						<i class="fas fa-sliders-h"></i> Menu
 					</button>
 				</div>
 				<div class="table-responsive border-0">
-					<table class="table align-middle p-4 mb-0 table-hover" id="TableJobs">
-						<thead class="thead-dark">
-							<tr>
-								<th scope="col" class="border-0 text-white rounded-start">Puesto</th>
-								<th scope="col" class="border-0 text-white">Empresa</th>
-								<th scope="col" class="border-0 text-white">Categoria</th>
-                                <th scope="col" class="border-0 text-white rounded-end">Acción</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td>
-                                    <button class="btn btn-sm btn-dark me-1 mb-1 mb-md-0 edit-btn" style="display: none;">
-                                        <i class="bi bi-pencil-square"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-danger me-1 mb-1 mb-md-0 delete-btn" style="display: none;">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-                                <td></td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="card card-body bg-light border p-sm-5 mt-5" id="contact-form">
+                        <form class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label heading-color">Empresa</label>
+                                <input type="text" class="form-control form-control-lg" id="Empresa" placeholder="Nombre de la empresa" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label heading-color">Categoria</label>
+                                <input type="text" class="form-control form-control-lg" id="Categoria" placeholder="Categoria del puesto" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label heading-color">Nombre del puesto</label>
+                                <input type="text" class="form-control form-control-lg" id="PuestoName" placeholder="Puesto aqui" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label heading-color">Salario</label>
+                                <input type="text" class="form-control form-control-lg" id="Salario" placeholder="Salario" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label heading-color">Ubicacion</label>
+                                <input type="text" class="form-control form-control-lg" id="Location" placeholder="Heredia" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label heading-color">Modalidad</label>
+                                <input type="text" class="form-control form-control-lg" id="Modalidad" placeholder="Remoto / Hibrido" required>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label heading-color">Habilidades</label>
+                                <textarea class="form-control" placeholder="Skills necesarias" id="Skills" style="height: 150px" required></textarea>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label heading-color">Responsabilidades</label>
+                                <textarea class="form-control" placeholder="Responsabilidades del puesto" id="Responsabilities" style="height: 150px" required></textarea>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label heading-color">Experiencia</label>
+                                <textarea class="form-control" placeholder="Experiencia necesaria" id="Experiencia" style="height: 150px" required></textarea>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label heading-color">Requisitos educativos:</label>
+                                <textarea class="form-control" placeholder="Requisitos educativos" id="Education" style="height: 150px" required></textarea>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label heading-color">Descripción</label>
+                                <textarea class="form-control" placeholder="Descripción del puesto" id="Description" style="height: 150px" required></textarea>
+                                <div class="valid-feedback">
+                                    Muy bien!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Por favor, ingresa un valor.
+                                </div>
+                            </div>
+                            <div class="col-12 d-grid">
+                                <button class="btn btn-lg btn-primary mb-0" id="sendJob">Enviar</button>
+                            </div>	
+                        </form>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -182,7 +256,7 @@
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 	<script src="js/authentication.js"></script>
     <script src="js/accountDetails.js"></script>
-    <script src="js/accountJobs.js"></script>
+    <script src="js/accountJobCreator.js"></script>
     <script src="js/accountDetailsMenu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
