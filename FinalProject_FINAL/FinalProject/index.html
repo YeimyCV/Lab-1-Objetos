@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>yoi - Encuentra trabajo fácil y rapido</title>
+    <link rel="icon" type="image/x-icon" href="media/icon.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/swipper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="media/fontawesome/css/all.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="header-sticky header-absolute">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <a class="navbar-brand me-0" href="index.html">
+                    <img class="navbar-brand-item" src="media/mainlogo.svg" alt="logo">
+                </a>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+                        <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="alljobs.html">Puestros disponibles</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="aboutus.html">Nosotros</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="contactUs.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <ul class="nav align-items-center dropdown-hover ms-sm-2">
+                    <li class="nav-item me-2">
+                        <a href="signin.html" class="btn btn-sm btn-light mb-0" id="loginBtn"><i class="bi bi-person-circle me-1"></i>Ingresar</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a href="signup.html" class="btn btn-sm btn-primary mb-0" id="signupBtn">Registrate</a>
+                    </li>
+                    <li class="nav-item" id="accountBtn" style="display: none;">
+                        <a href="account.html" class="btn btn-sm btn-primary mb-0">Mi cuenta</a>
+                    </li>
+                    <li class="nav-item" id="logoutBtn" style="display: none;">
+                        <a class="nav-link text-danger" href="#"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Salir</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-animation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </li>	
+                </ul>
+            </div>
+        </nav>
+</header>
+<section class="position-relative pt-8 pt-xl-9">
+	<div class="container position-relative z-index-1 mb-5 mb-lg-7 pb-sm-6">
+		<div class="row g-4 g-xxl-5">
+			<div class="col-lg-10 col-xl-8 text-center mx-auto">
+				<figure class="position-absolute start-0 bottom-0 rotate-33 ms-7 mb-8">
+                    <object data="media/iconyoi.svg" width="180px" height="180px"> </object>
+				</figure>
+				<div class="position-relative mb-5">
+					<h1 class="display-5 mb-0 lh-sm-base">La nueva manera de <span class="text-primary">consegir</span> un 
+						<span class="position-relative">trabajo
+							<span class="position-absolute top-50 start-50 translate-middle z-index-n1 mt-n1 d-none d-lg-block">
+								<svg width="219" height="87" viewBox="0 0 219 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M214 6.5H5V81H214V6.5Z" stroke="#09B850" stroke-width="2"></path>
+									<path class="fill-mode" d="M209 0H219V10H209V0Z"></path>
+									<path class="fill-mode" d="M209 77H219V87H209V77Z"></path>
+									<path class="fill-mode" d="M0 0H10V10H0V0Z"></path>
+									<path class="fill-mode" d="M0 75H10V85H0V75Z"></path>
+								</svg>
+							</span>
+						</span>
+					</h1>
+				</div>
+				<p>Explora oportunidades profesionales interesantes y forma parte de la creación del futuro.</p>
+			</div>
+		</div>
+	</div>
+	<div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" data-swiper-options="{
+			&quot;spaceBetween&quot;: 50, 
+			&quot;speed&quot;:&quot;14000&quot;,
+			&quot;autoplay&quot;:{
+				&quot;delay&quot;: 0, 
+				&quot;disableOnInteraction&quot;: false
+			},
+			&quot;breakpoints&quot;: {
+				&quot;576&quot;: {&quot;slidesPerView&quot;: 2},
+				&quot;992&quot;: {&quot;slidesPerView&quot;: 3},
+				&quot;1200&quot;: {&quot;slidesPerView&quot;: 4},
+				&quot;1400&quot;: {&quot;slidesPerView&quot;: 5}
+			}}">
+		<div class="swiper-wrapper align-items-center styleSwipper" id="swiper-wrapper-23fc9a220412ae54" aria-live="off">
+		<div class="swiper-slide" style="width: 344px; margin-right: 50px;" role="group" aria-label="8 / 9" data-swiper-slide-index="7">
+				<img src="media/01.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div><div class="swiper-slide" role="group" aria-label="9 / 9" style="width: 344px; margin-right: 50px;" data-swiper-slide-index="8">
+				<img src="media/05.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div><div class="swiper-slide" style="width: 344px; margin-right: 50px;" role="group" aria-label="1 / 9" data-swiper-slide-index="0">
+				<img src="media/07.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div><div class="swiper-slide swiper-slide-prev" style="width: 344px; margin-right: 50px;" role="group" aria-label="2 / 9" data-swiper-slide-index="1">
+				<img src="media/03.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div><div class="swiper-slide swiper-slide-active" style="width: 344px; margin-right: 50px;" role="group" aria-label="3 / 9" data-swiper-slide-index="2">
+				<img src="media/09.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div><div class="swiper-slide swiper-slide-next" style="width: 344px; margin-right: 50px;" role="group" aria-label="4 / 9" data-swiper-slide-index="3">
+				<img src="media/02.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div><div class="swiper-slide" style="width: 344px; margin-right: 50px;" role="group" aria-label="5 / 9" data-swiper-slide-index="4">
+				<img src="media/08.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div><div class="swiper-slide" style="width: 344px; margin-right: 50px;" role="group" aria-label="6 / 9" data-swiper-slide-index="5">
+				<img src="media/06.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div><div class="swiper-slide" style="width: 344px; margin-right: 50px;" role="group" aria-label="7 / 9" data-swiper-slide-index="6">
+				<img src="media/04.webp" class="rounded" alt="fotografia ilustrativa de personas trabajando">
+			</div></div>		
+	<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+</section>
+<section class="pt-0">
+	<div class="container">
+		<div class="row row-cols-2 row-cols-lg-4 g-4">
+			<div class="col">
+				<div class="d-flex align-items-center">
+					<div class="icon-lg bg-dark rounded text-white flex-shrink-0"> <i class="bi bi-briefcase fs-5"></i></div>
+					<div class="ms-3">
+						<div class="d-flex">
+							<h5 class="purecounter mb-0" data-purecounter-start="0" data-purecounter-end="60" data-purecounter-delay="300" data-purecounter-duration="0">60</h5>
+							<span class="h5 text-primary mb-0">+</span>
+						</div>
+						<p class="mb-0">Trabajos publicados</p>
+					</div>	
+				</div>
+			</div>
+			<div class="col">
+				<div class="col">
+					<div class="d-flex align-items-center">
+						<div class="icon-lg bg-dark rounded text-white flex-shrink-0"> <i class="bi bi-buildings fs-5"></i></div>
+						<div class="ms-3">
+							<h5 class="purecounter mb-0" data-purecounter-start="0" data-purecounter-end="58" data-purecounter-delay="300" data-purecounter-duration="0">58</h5>
+							<p class="mb-0">Compañias</p>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="col">
+					<div class="d-flex align-items-center">
+						<div class="icon-lg bg-dark rounded text-white flex-shrink-0"> <i class="bi bi-people fs-5"></i> </div>
+						<div class="ms-3">
+							<div class="d-flex">
+								<h5 class="purecounter mb-0" data-purecounter-start="0" data-purecounter-end="12" data-purecounter-delay="300" data-purecounter-duration="0">12</h5>
+								<span class="h5 text-primary mb-0">K+</span>
+							</div>
+							<p class="mb-0">Resumes enviados</p>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="col">
+					<div class="d-flex align-items-center">
+						<div class="icon-lg bg-dark rounded text-white flex-shrink-0"> <i class="bi bi-briefcase fs-5"></i> </div>
+						<div class="ms-3">
+							<div class="d-flex">
+								<h5 class="purecounter mb-0" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-delay="300" data-purecounter-duration="0">10</h5>
+								<span class="h5 text-primary mb-0">+</span>
+							</div>
+							<p class="mb-0">Nuevos posts</p>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="pt-0">
+    <div class="container">
+        <div class="inner-container-small text-center mb-4 mb-sm-6">
+            <h2 class="mb-3">Puestos disponibles</h2>
+        </div>
+        <div class="row g-4 g-lg-6">
+            <div class="col-lg-9 mx-auto">
+                <ul class="nav nav-pills gap-1 nav-pills-light justify-content-center align-items-center mb-3 mb-sm-5" role="tablist">
+                    <li class="nav-item">
+                        <span class="pe-2">Buscar por:</span>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">Todos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-development-tab" data-bs-toggle="pill" data-bs-target="#pills-development" type="button" role="tab" aria-controls="pills-development" aria-selected="false" tabindex="-1">Development</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-hr-tab" data-bs-toggle="pill" data-bs-target="#pills-hr" type="button" role="tab" aria-controls="pills-hr" aria-selected="false" tabindex="-1">Administrativo</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-marketing-tab" data-bs-toggle="pill" data-bs-target="#pills-marketing" type="button" role="tab" aria-controls="pills-marketing" aria-selected="false" tabindex="-1">Marketing</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-design-tab" data-bs-toggle="pill" data-bs-target="#pills-design" type="button" role="tab" aria-controls="pills-design" aria-selected="false" tabindex="-1">Diseño</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 1</div>
+                                <h5 class="mb-0"><a href="job1.html" class="stretched-link">UI/UX and Product Designer</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>Heredia, Costa Rica</span>
+                                    <span><i class="bi bi-clock me-2"></i>Hybrid</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$32,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job1.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 2</div>
+                                <h5 class="mb-0"><a href="job2.html" class="stretched-link">General Office Manager</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San José, Costa Rica</span>
+                                    <span><i class="bi bi-clock me-2"></i>OnSite</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$61,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job2.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 3</div>
+                                <h5 class="mb-0"><a href="job3.html" class="stretched-link">Machine Learning Specialist</a></h5>
+                
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>Flores, Heredia</span>
+                                    <span><i class="bi bi-clock me-2"></i>Remote</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$18,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job3.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 4</div>
+                                <h5 class="mb-0"><a href="job4.html" class="stretched-link">Senior Product Manager</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San Rafael, Heredia</span>
+                                    <span><i class="bi bi-clock me-2"></i>Hybrid</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$39,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job4.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 2</div>
+                                <h5 class="mb-0"><a href="job5.html" class="stretched-link">Customer Service Representative</a></h5>
+                
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San José, San José</span>
+                                    <span><i class="bi bi-clock me-2"></i>OnSite</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$19,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job5.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 1</div>
+                                <h5 class="mb-0"><a href="job6.html" class="stretched-link">Senior Operations Manager</a></h5>
+                
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San Rafael, Heredia</span>
+                                    <span><i class="bi bi-clock me-2"></i>Remote</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$60,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job6.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 6</div>
+                                <h5 class="mb-0"><a href="job7.html" class="stretched-link">Junior UI/UX Designer</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San Rafael, Heredia</span>
+                                    <span><i class="bi bi-clock me-2"></i>Hybrid</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$15,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job7.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-development" role="tabpanel" aria-labelledby="pills-development-tab" tabindex="0">
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 3</div>
+                                <h5 class="mb-0"><a href="job3.html" class="stretched-link">Machine Learning Specialist</a></h5>
+                
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>Flores, Heredia</span>
+                                    <span><i class="bi bi-clock me-2"></i>Remote</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$18,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job3.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 6</div>
+                                <h5 class="mb-0"><a href="job7.html" class="stretched-link">Junior UI/UX Designer</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San Rafael, Heredia</span>
+                                    <span><i class="bi bi-clock me-2"></i>Hybrid</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$15,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job7.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-hr" role="tabpanel" aria-labelledby="pills-hr-tab" tabindex="0">
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 4</div>
+                                <h5 class="mb-0"><a href="job4.html" class="stretched-link">Senior Product Manager</a></h5>
+                
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San Rafael, Heredia</span>
+                                    <span><i class="bi bi-clock me-2"></i>Hybrid</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$39,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job4.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 2</div>
+                                <h5 class="mb-0"><a href="job2.html" class="stretched-link">General Office Manager</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San José, Costa Rica</span>
+                                    <span><i class="bi bi-clock me-2"></i>OnSite</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$61,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job2.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-marketing" role="tabpanel" aria-labelledby="pills-marketing-tab" tabindex="0">
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 2</div>
+                                <h5 class="mb-0"><a href="job5.html" class="stretched-link">Customer Service Representative</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San José, San José</span>
+                                    <span><i class="bi bi-clock me-2"></i>OnSite</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$19,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job5.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab" tabindex="0">
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 6</div>
+                                <h5 class="mb-0"><a href="job7.html" class="stretched-link">Junior UI/UX Designer</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>San Rafael, Heredia</span>
+                                    <span><i class="bi bi-clock me-2"></i>Hybrid</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$15,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job7.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">Compañia 1</div>
+                                <h5 class="mb-0"><a href="job1.html" class="stretched-link">UI/UX and Product Designer</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>Heredia, Costa Rica</span>
+                                    <span><i class="bi bi-clock me-2"></i>Hybrid</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>$32,000</span>
+                                </div>
+                            </div>
+                            <div><a href="job1.html" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="position-relative z-index-2 py-0 mb-n7">
+	<div class="container position-relative">
+		<div class="bg-primary rounded position-relative overflow-hidden p-4 p-sm-5">
+			<figure class="position-absolute top-0 start-0 ms-n8">
+				<svg width="371" height="354" viewBox="0 0 371 354" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<ellipse cx="172.5" cy="176.5" rx="131.5" ry="125.5" fill="url(#paint0_linear_195_2)"></ellipse>
+					<ellipse cx="185.5" cy="177" rx="185.5" ry="177" fill="url(#paint1_linear_195_2)"></ellipse>
+					<defs>
+					<linearGradient id="paint0_linear_195_2" x1="172.5" y1="51" x2="172.5" y2="302" gradientUnits="userSpaceOnUse">
+					<stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0.5"></stop>
+					<stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0"></stop>
+					</linearGradient>
+					<linearGradient id="paint1_linear_195_2" x1="185.5" y1="0" x2="185.5" y2="354" gradientUnits="userSpaceOnUse">
+					<stop offset="0.0569271" stop-color="#D9D9D9" stop-opacity="0.2"></stop>
+					<stop offset="0.998202" stop-color="#D9D9D9" stop-opacity="0"></stop>
+					</linearGradient>
+					</defs>
+				</svg>
+			</figure>
+			<div class="row g-4 position-relative">
+				<div class="col-lg-7 mx-auto text-center">
+					<h1 class="text-white mb-4">Lleva tu carrera al siguiente nivel</h1>
+					<p class="text-white mb-4 small">Explora las posibilidades y descubre cómo yoi puede llevar tu futuro al siguiente nivel.</p>
+					<a href="signup.html" target="_blank" class="btn btn-dark">¡Registrate ahora!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="bg-dark pt-6" data-bs-theme="dark">
+        <div class="container position-relative mt-sm-5">
+            <div class="row g-3 g-md-4 align-items-center">
+                <div class="col-md-8 col-xl-6 text-center text-md-start">
+                    <h2 class="display-6 fw-semibold mb-md-3 text-white">Hagamos crecer <br>tu carrera</h2>
+                </div>
+                <div class="col-md-4 text-center text-md-end ms-auto">
+                    <a href="contactUs.html" class="icon-xxl bg-primary btn-white-hover rounded-circle btn small fw-normal text-white p-0">¡Contactanos!</a>
+                </div>
+            </div>
+            <hr class="opacity-1 mt-4 mb-3">
+            <div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-3">
+                <a class="navbar-brand" href="index.html">
+                    <img class="navbar-brand-item h-40px" src="media/mainlogo White.svg" alt="logo">
+                </a>
+                <div class="text-body mt-3 mt-md-0"> Copyrights ©2024 yoi.</div>
+            </div>
+        </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/homepage.js"></script>
+    <script src="js/authentication.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+        <script>
+            new PureCounter();
+        </script>
+  </body>
+</html>

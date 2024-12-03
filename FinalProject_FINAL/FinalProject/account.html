@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>yoi - Encuentra trabajo fácil y rapido</title>
+    <link rel="icon" type="image/x-icon" href="media/icon.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swipper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="media/fontawesome/css/all.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="header-sticky header-absolute">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <a class="navbar-brand me-0" href="index.html">
+                    <img class="navbar-brand-item" src="media/mainlogo.svg" alt="logo">
+                </a>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+                        <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="alljobs.html">Puestros disponibles</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="aboutus.html">Nosotros</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="contactUs.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <ul class="nav align-items-center dropdown-hover ms-sm-2">
+                    <li class="nav-item me-2">
+                        <a href="signin.html" class="btn btn-sm btn-light mb-0" id="loginBtn"><i class="bi bi-person-circle me-1"></i>Ingresar</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a href="signup.html" class="btn btn-sm btn-primary mb-0" id="signupBtn">Registrate</a>
+                    </li>
+                    <li class="nav-item" id="accountBtn" style="display: none;">
+                        <a href="account.html" class="btn btn-sm btn-primary mb-0">Mi cuenta</a>
+                    </li>
+                    <li class="nav-item" id="logoutBtn" style="display: none;">
+                        <a class="nav-link text-danger" href="#"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Salir</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-animation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </li>	
+                </ul>
+            </div>
+        </nav>
+</header>
+<section class="ptfixAccount">
+	<div class="container pt-3 pt-xl-5">
+		<div class="row">
+			<div class="col-lg-4 col-xl-3">
+				<div class="offcanvas-lg offcanvas-start h-100" tabindex="-1" id="offcanvasSidebar">
+					<div class="offcanvas-header bg-light">
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mi perfil</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasSidebar" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body p-0">
+						<div class="card border p-3 w-100">
+							<div class="card-header text-center border-bottom">
+									<div class="avatar avatar-xl position-relative mb-2">
+										<img class="avatar-img rounded-circle border border-2 border-white" src="media/mainAvatar.webp" alt="">
+									</div>
+									<h6 class="mb-0" id="fullName"></h6>
+									<a href="#" class="text-reset text-primary-hover small" id="email"></a>
+							</div>
+							<div class="card-body p-0 mt-4">
+								<ul class="nav nav-pills-primary-border-start flex-column">
+									<li class="nav-item">
+										<a class="nav-link active" href="account.html"><i class="bi bi-person fa-fw me-2"></i>Mi perfil</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="account_applications.html"><i class="bi bi-shield-lock fa-fw me-2"></i>Mis aplicaciones</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="account_CreateAJob.html"><i class="bi bi-file-earmark-plus-fill fa-fw me-2"></i>Crear un puesto</a>
+									</li>	
+									<li class="nav-item">
+										<a class="nav-link" href="account_jobs.html"><i class="bi bi-bell fa-fw me-2"></i>Trabajos Registrados</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="account_Usuarios.html"><i class="bi bi-people-fill fa-fw me-2"></i>Usuarios Registrados</a>
+									</li>											
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+			<div class="col-lg-8 col-xl-9 ps-lg-4 ps-xl-6">
+				<div class="d-flex justify-content-between align-items-center mb-5 mb-sm-6">
+					<h1 class="h3 mb-0">Mi perfil</h1>
+					<button class="btn btn-primary d-lg-none flex-shrink-0 ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+						<i class="fas fa-sliders-h"></i> Menu
+					</button>
+				</div>
+				<form>
+					<div class="card bg-transparent p-0">
+						<div class="card-header bg-transparent border-bottom p-0 pb-3">
+							<h6 class="mb-0">Información personal</h6>
+						</div>
+						<div class="card-body px-0">
+							<div class="row g-4">
+								<div class="col-12">
+									<label class="form-label">Foto del perfil</label>
+									<div class="d-flex align-items-center">
+										<label class="position-relative me-2" title="Replace this pic">
+											<span class="avatar avatar-xl">
+												<img class="avatar-img rounded-circle border border-white border-3 shadow" src="media/mainAvatar.webp" alt="">
+											</span>
+											<button class="uploadremove" control-id="ControlID-1"><i class="bi bi-x text-white"></i></button>
+										</label>
+										<label class="btn btn-sm btn-dark mb-0">Cambiar</label>
+										<input class="form-control d-none" type="file" control-id="ControlID-2">
+									</div>
+								</div>
+								<div class="col-12">
+									<label class="form-label">Nombre completo</label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="Nombre1" placeholder="">
+										<input type="text" class="form-control" id="Apellido1" placeholder="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label class="form-label">Email</label>
+									<input type="email" class="form-control" placeholder="" id="Correo1">
+								</div>
+								<div class="col-md-6">
+									<label class="form-label">Numero de teléfono</label>
+									<input type="text" class="form-control" placeholder="" id="Phone1">
+								</div>
+								<div class="col-12 text-end">
+									<a href="#" class="btn btn-primary mb-0" id="saveButton1">Guardar</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="bg-dark ptfixfooter" data-bs-theme="dark">
+    <div class="container position-relative mt-sm-5">
+        <div class="row g-3 g-md-4 align-items-center">
+            <div class="col-md-8 col-xl-6 text-center text-md-start">
+                <h2 class="display-6 fw-semibold mb-md-3 text-white">Hagamos avanzar tu carrera</h2>
+            </div>
+            <div class="col-md-4 text-center text-md-end ms-auto">
+                <a href="contactUs.html" class="icon-xxl bg-primary btn-white-hover rounded-circle btn small fw-normal text-white p-0">¡Contactanos!</a>
+            </div>
+        </div>
+        <hr class="opacity-1 mt-4 mb-3">
+        <div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-3">
+            <a class="navbar-brand" href="index.html">
+                <img class="navbar-brand-item h-40px" src="media/mainlogo White.svg" alt="logo">
+            </a>
+            <div class="text-body mt-3 mt-md-0"> Copyrights ©2024 Get me a job.</div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+	<script src="js/authentication.js"></script>
+	<script src="js/accountDetails.js"></script>
+	<script src="js/accountDetailsEditDetails.js"></script>
+	<script src="js/accountDetailsMenu.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Job Search</title>
+</head>
+<body>
+    <div class="bg-light border rounded-3 position-relative px-4 py-3 mt-5">
+        <form class="row g-3 justify-content-center align-items-center" id="searchForm">
+            <div class="col-lg-5">
+                <div class="position-relative">
+                    <input class="form-control form-control-lg me-1 ps-5" type="text" id="searchInput" placeholder="Busca aqui">
+                    <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-briefcase"></i></span>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="position-relative">
+                    <select class="form-select form-select-lg ps-5" id="typeSelect">
+                        <option value="">Tipo</option>
+                        <option value="OnSite">OnSite</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Remote">Remote</option>
+                    </select>
+                    <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-geo-alt"></i></span>
+                </div>
+            </div>
+            <div class="col-lg-2 d-grid">
+                <button type="submit" class="btn btn-dark mb-0"><i class="bi bi-search me-2"></i>Buscar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="jobResults" class="mt-4"></div>
+
+    <div id="noResults" class="text-center justify-content-center p-sm-4" style="display: none;">
+        <span class="display-5 text-primary"><i class="bi bi-slash-circle"></i></span>
+        <h5 class="mb-0 mt-2 mt-sm-4">No hay vacantes disponibles para este puesto.</h5>
+    </div>
+
+    <script>
+        const jobListings = [
+            { title: "UI/UX and Product Designer", company: "Company 1", location: "Location 1", type: "Remote", salary: "$60,000" },
+            { title: "General Office Manager", company: "Company 2", location: "Location 2", type: "OnSite", salary: "$50,000" },
+            { title: "Machine Learning Specialist", company: "Company 3", location: "Location 3", type: "Hybrid", salary: "$80,000" },
+            { title: "Senior Product Manager", company: "Company 4", location: "Location 4", type: "Remote", salary: "$100,000" },
+            { title: "Customer Service Representative", company: "Company 5", location: "Location 5", type: "OnSite", salary: "$35,000" },
+            { title: "Senior Operations Manager", company: "Company 6", location: "Location 6", type: "Hybrid", salary: "$90,000" },
+            { title: "Junior UI/UX Designer", company: "Company 7", location: "San Rafael, Heredia", type: "Hybrid", salary: "$15,000" }
+        ];
+
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const jobResults = document.getElementById('jobResults');
+            const noResultsMessage = document.getElementById('noResults');
+
+            let found = false;
+            jobResults.innerHTML = ''; // Clear previous results
+
+            jobListings.forEach(job => {
+                // Check if job title includes the search input
+                if (job.title.toLowerCase().includes(searchInput)) {
+                    found = true;
+                    const jobCard = `
+                        <div class="card card-body bg-light d-md-flex justify-content-md-between align-items-md-center flex-md-row p-4 mb-3">
+                            <div class="mb-4 mb-md-0">
+                                <div class="badge text-bg-dark mb-3">${job.company}</div>
+                                <h5 class="mb-0"><a href="#" class="stretched-link">${job.title}</a></h5>
+                                <div class="hstack gap-3 gap-sm-4 flex-wrap mt-3">
+                                    <span><i class="bi bi-geo-alt me-2"></i>${job.location}</span>
+                                    <span><i class="bi bi-clock me-2"></i>${job.type}</span>
+                                    <span><i class="bi bi-briefcase me-2"></i>${job.salary}</span>
+                                </div>
+                            </div>
+                            <div><a href="#" class="btn btn-primary mb-0">Aplica ahora<i class="bi bi-arrow-right ms-2"></i></a></div>
+                        </div>`;
+                    jobResults.insertAdjacentHTML('beforeend', jobCard);
+                }
+            });
+
+            if (found) {
+                noResultsMessage.style.display = 'none'; // Hide no results message
+                jobResults.style.display = 'block'; // Show results
+            } else {
+                noResultsMessage.style.display = 'block'; // Show no results message
+                jobResults.style.display = 'none'; // Hide results
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>yoi - Encuentra trabajo fácil y rapido</title>
+    <link rel="icon" type="image/x-icon" href="media/icon.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swipper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="media/fontawesome/css/all.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="header-sticky header-absolute">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <a class="navbar-brand me-0" href="index.html">
+                    <img class="navbar-brand-item" src="media/mainlogo.svg" alt="logo">
+                </a>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+                        <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="alljobs.html">Puestros disponibles</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="aboutus.html">Nosotros</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="contactUs.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <ul class="nav align-items-center dropdown-hover ms-sm-2">
+                    <li class="nav-item me-2">
+                        <a href="signin.html" class="btn btn-sm btn-light mb-0" id="loginBtn"><i class="bi bi-person-circle me-1"></i>Ingresar</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-block">
+                        <a href="signup.html" class="btn btn-sm btn-primary mb-0" id="signupBtn">Registrate</a>
+                    </li>
+                    <li class="nav-item" id="accountBtn" style="display: none;">
+                        <a href="account.html" class="btn btn-sm btn-primary mb-0">Mi cuenta</a>
+                    </li>
+                    <li class="nav-item" id="logoutBtn" style="display: none;">
+                        <a class="nav-link text-danger" href="#"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Salir</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-animation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </li>	
+                </ul>
+            </div>
+        </nav>
+</header>
+<section class="pt-7 pt-md-8 pt-xl-9">
+	<div class="container pt-5 pt-md-0">
+		<div class="row">
+			<div class="col-lg-6 col-xl-5 mb-6 mb-lg-0">
+				<div class="d-flex flex-column h-100">
+					<h1 class="mb-4">Explorando el corazón de <span class="text-primary">yoi </span></h1>
+					<p class="mb-5 mb-xl-0">¡Juntos, desbloqueemos tu futuro y hagamos realidad tus sueños profesionales!</p>
+					<div class="mt-auto">
+						<ul class="list-inline mb-3">
+							<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+							<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+							<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+							<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+							<li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
+						</ul>
+						<q class="h6 fw-semibold mb-0">¡Yoi ha transformado por completo mi búsqueda de empleo! La interfaz es fácil de usar y me encanta lo rápido que puedo postularme a los puestos. ¡Conseguí una entrevista en una semana!</q>
+						<p class="mb-0 mt-3 text-body-secondary"><span class="heading-color fw-normal">- Emma J</p>
+						<div class="row row-cols-sm-2 mt-3">
+							<div class="cols">
+								<hr class="mb-4">
+								<figure class="text-primary mb-2">
+									<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.47802 7.91504C2.25 8.79835 2.25 9.94603 2.25 11.9996C2.25 14.3272 2.25 15.491 2.582 16.4252C3.16141 18.0555 4.44414 19.3382 6.07444 19.9176C7.0086 20.2496 8.1724 20.2496 10.5 20.2496H13.5C15.8276 20.2496 16.9914 20.2496 17.9256 19.9176C19.5559 19.3382 20.8386 18.0555 21.418 16.4252C21.75 15.491 21.75 14.3272 21.75 11.9996C21.75 9.94605 21.75 8.79838 21.522 7.91506L17.754 10.6916C16.6402 11.5123 15.7625 12.1591 15.002 12.6175C14.2228 13.087 13.5145 13.3922 12.7288 13.4926C12.2452 13.5543 11.7557 13.5543 11.2721 13.4926C10.4864 13.3923 9.77801 13.0871 8.99883 12.6176C8.23833 12.1593 7.36057 11.5125 6.24672 10.6918L2.47802 7.91504Z" fill="currentColor" fill-opacity="0.25"></path>
+										<path d="M3.09186 6.50448L7.10646 9.46247C8.25692 10.3101 9.07916 10.915 9.77305 11.3332C10.4551 11.7442 10.9602 11.941 11.4621 12.005C11.8195 12.0507 12.1813 12.0507 12.5387 12.005C13.0406 11.9409 13.5457 11.7441 14.2277 11.3331C14.9216 10.9149 15.7438 10.31 16.8942 9.46225L20.9082 6.50449C20.2273 5.38896 19.1792 4.52754 17.9256 4.082C16.9914 3.75 15.8276 3.75 13.5 3.75L10.5 3.75C8.17241 3.75 7.00861 3.75 6.07445 4.082C4.82082 4.52754 3.7727 5.38895 3.09186 6.50448Z" fill="currentColor"></path>
+									</svg>
+								</figure>
+								<p class="heading-color mb-0">Avenida Central, Francisco Peralta, 10104.</p>
+							</div>
+							<div class="cols">
+								<hr class="mb-4">
+								<figure class="text-primary mb-2">
+									<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.5573 21.3204C14.2451 20.8085 15.174 20.072 16.1369 19.1733C18.0303 17.4062 20.1864 14.8931 20.7356 12.1471C21.8463 6.59263 17.3472 2.25 12.0001 2.25C6.65311 2.25 2.15361 6.5926 3.26469 12.1471C3.81397 14.8931 5.97011 17.4062 7.86344 19.1733C8.8263 20.072 9.75517 20.8085 10.443 21.3204C10.4887 21.3544 10.3745 21.2694 10.3908 21.2812C11.275 21.9193 12.7253 21.9193 13.6095 21.2812C13.6258 21.2694 13.5116 21.3544 13.5573 21.3204Z" fill="currentColor" fill-opacity="0.25"></path>
+										<path d="M15.5 11.1504C15.5 13.0834 13.933 14.6504 12 14.6504C10.067 14.6504 8.5 13.0834 8.5 11.1504C8.5 9.21739 10.067 7.65039 12 7.65039C13.933 7.65039 15.5 9.21739 15.5 11.1504Z" fill="currentColor"></path>
+									</svg>
+								</figure>
+								<a href="#" class="heading-color text-primary-hover text-decoration-underline mb-0">info@yoi.com</a>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="col-lg-6 col-xl-6 ms-auto h-100">
+				<div class="row align-items-center">
+					<div class="col-6 me-sm-n7">
+						<div class="position-relative">
+							<figure class="text-primary position-absolute top-0 start-0 mt-n5 ms-n5">
+								<object data="media/iconyoi.svg" width="180px" height="180px"> </object>
+							</figure>
+
+							<img src="media/back3.webp" class="rounded-4" alt="">
+						</div>
+					</div>
+					<div class="col-6 position-relative">
+                        <div class="card card-body overflow-hidden p-0 mb-4 mb-sm-7">
+							<img src="media/back4.webp" class="card-img" alt="img">
+						</div>
+						<img src="media/back5.webp" class="rounded-4" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="pt-0">
+	<div class="container">
+		<div class="row g-4 align-items-center">
+			<div class="col-lg-6">
+				<div class="row g-xl-5">
+					<div class="col-md-6">
+						<div class="card card-body bg-light p-4 mt-5">
+                            <i class="bi bi-people-fill text-primary iconFix"></i>
+							<h6>Pasión por la gente</h6>
+							<p class="mb-0">Empoderamos a las personas para que persigan sus sueños y se conecten con oportunidades que importan.</p>
+						</div>
+						<div class="card card-body bg-light p-4 mt-5">
+							<i class="bi bi-stack text-primary iconFix"></i>
+							<h6>Soluciones innovadoras</h6>
+							<p class="mb-0">Nuestra tecnología de vanguardia transforma la experiencia de búsqueda de empleo tanto para candidatos como para empleadores.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card card-body bg-light p-4">
+							<i class="bi bi-person-heart text-primary iconFix"></i>
+							<h6>Centrado en la comunidad</h6>
+							<p class="mb-0">Creemos en fomentar una comunidad solidaria que prospere gracias a la colaboración.</p>
+						</div>
+						<div class="card card-body bg-light p-4 mt-5">
+							<i class="bi bi-compass-fill text-primary iconFix"></i>
+							<h6>Orientación experta</h6>
+							<p class="mb-0">Nuestro equipo experimentado está aquí para brindarle información y asesoramiento.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 ps-xl-7">
+				<h2 class="mb-4">Conócenos</h2>
+				<p>En Yoi, creemos en el poder de las conexiones. Nuestra misión es simplificar el proceso de búsqueda de empleo y empoderar a las personas para que encuentren oportunidades que se alineen con sus pasiones y habilidades.</p>
+				<p class="mb-4">Con un equipo dedicado y un enfoque centrado en la comunidad, nos esforzamos por brindar soluciones innovadoras que marquen una verdadera diferencia en su trayectoria profesional.</p>
+				<a class="icon-link icon-link-hover" href="contactUs.html">Ponte en contacto<i class="bi bi-arrow-right"></i> </a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="bg-light">
+	<div class="container">
+		<div class="row g-4 align-items-center">
+			<div class="col-xl-4">
+				<h3 class="mb-4">¿Por qué a nuestros clientes les encanta yoi?</h3>
+				<p class="lead mb-2">300+ usuarios nos calificaron <span class="text-warning fw-bold">4.85</span> de 5.</p>
+				<ul class="avatar-group mb-sm-0">
+					<li class="avatar avatar-sm">
+						<img class="avatar-img rounded-circle" src="media/Nida.webp" alt="avatar">
+					</li>
+					<li class="avatar avatar-sm">
+						<img class="avatar-img rounded-circle" src="media/Sabrina.webp" alt="avatar">
+					</li>
+					<li class="avatar avatar-sm">
+						<img class="avatar-img rounded-circle" src="media/project3Avatar.webp" alt="avatar">
+					</li>
+					<li class="avatar avatar-sm">
+						<img class="avatar-img rounded-circle" src="media/sam.webp" alt="avatar">
+					</li>
+					<li class="avatar avatar-sm">
+						<img class="avatar-img rounded-circle" src="media/project2Avatar.webp" alt="avatar">
+					</li>
+					<li class="avatar avatar-sm">
+						<img class="avatar-img rounded-circle" src="media/Frances.webp" alt="avatar">
+					</li>
+				</ul>
+			</div>
+			<div class="col-xl-8">
+				<div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" data-swiper-options="{
+					&quot;spaceBetween&quot;: 30, 
+					&quot;grabCursor&quot;: true,
+					&quot;navigation&quot;:{
+						&quot;nextEl&quot;:&quot;.swiper-button-next&quot;,
+						&quot;prevEl&quot;:&quot;.swiper-button-prev&quot;
+					},
+					&quot;breakpoints&quot;: {
+						&quot;576&quot;: {&quot;slidesPerView&quot;: 1}, 
+						&quot;768&quot;: {&quot;slidesPerView&quot;: 2}, 
+						&quot;992&quot;: {&quot;slidesPerView&quot;: 2}
+					}}">
+					<div class="swiper-wrapper" id="swiper-wrapper-e9040ef1212bb9f1" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-868px, 0px, 0px); transition-delay: 0ms;">
+					<div class="swiper-slide" role="group" aria-label="4 / 4" data-swiper-slide-index="3" style="width: 404px; margin-right: 30px;">
+							<div class="card card-body bg-light p-sm-5">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded"><i class="bi bi-quote fa-xl"></i></div>
+								<p class="lead my-3">¡Yoi ha transformado por completo mi búsqueda de empleo! La interfaz es fácil de usar y me encanta lo rápido que puedo postularme a los puestos. ¡Conseguí una entrevista en una semana!</p>
+								<ul class="list-inline mb-4">
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
+								</ul>
+								<div class="d-sm-flex align-items-center">
+									<div class="avatar flex-shrink-0">
+										<img class="avatar-img rounded-circle" src="media/avatar2.webp" alt="avatar">
+									</div>
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-0">Emma J</h6>
+										<p class="mb-0 small">Usuaria de yoi</p>
+									</div>
+								</div>
+							</div>
+						</div><div class="swiper-slide swiper-slide-prev" style="width: 404px; margin-right: 30px;" role="group" aria-label="1 / 4" data-swiper-slide-index="0">
+							<div class="card card-body bg-light p-sm-5">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded"><i class="bi bi-quote fa-xl"></i></div>
+								<p class="lead my-3">Excelente aplicación con una amplia variedad de ofertas de trabajo. Agradezco los filtros para acotar mi búsqueda. Algunos errores aquí y allá, pero en general una experiencia fantástica.</p>
+								<ul class="list-inline mb-4">
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
+								</ul>
+								<div class="d-sm-flex align-items-center">
+									<div class="avatar flex-shrink-0">
+										<img class="avatar-img rounded-circle" src="media/avatar3.webp" alt="avatar">
+									</div>
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-0">Michael T</h6>
+										<p class="mb-0 small">Usuario de yoi</p>
+									</div>
+								</div>
+							</div>
+						</div><div class="swiper-slide swiper-slide-active" style="width: 404px; margin-right: 30px;" role="group" aria-label="2 / 4" data-swiper-slide-index="1">
+							<div class="card card-body bg-light p-sm-5">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded"><i class="bi bi-quote fa-xl"></i></div>
+								<p class="lead my-3">He probado varias aplicaciones de empleo, pero yoi es, sin duda, la mejor. El proceso de solicitud es muy sencillo. ¡La recomiendo mucho!</p>
+								<ul class="list-inline mb-4">
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
+								</ul>
+								<div class="d-sm-flex align-items-center">
+									<div class="avatar flex-shrink-0">
+										<img class="avatar-img rounded-circle" src="media/avatar5.webp" alt="avatar">
+									</div>
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-0">Sophia L</h6>
+										<p class="mb-0 small">Usuaria de yoi</p>
+									</div>
+								</div>
+							</div>
+						</div><div class="swiper-slide swiper-slide-next" style="width: 404px; margin-right: 30px;" role="group" aria-label="3 / 4" data-swiper-slide-index="2">
+							<div class="card card-body bg-light p-sm-5">
+								<div class="icon-lg bg-primary bg-opacity-10 text-primary rounded"><i class="bi bi-quote fa-xl"></i></div>
+								<p class="lead my-3">¡Estoy muy impresionado con Yoi! Solo desearía que hubiera más opciones de trabajo remoto.</p>
+								<ul class="list-inline mb-4">
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-fill text-warning"></i></li>
+									<li class="list-inline-item me-0"><i class="bi bi-star-half text-warning"></i></li>
+								</ul>
+								<div class="d-sm-flex align-items-center">
+									<div class="avatar flex-shrink-0">
+										<img class="avatar-img rounded-circle" src="media/Andre.webp" alt="avatar">
+									</div>
+									<div class="ms-sm-3 mt-2 mt-sm-0">
+										<h6 class="mb-0">David R</h6>
+										<p class="mb-0 small">Usuario de yoi</p>
+									</div>
+								</div>
+							</div>
+						</div></div>	
+				<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+    <div class="ptfixAboutUs"></div>
+</section>
+<footer class="bg-dark ptfixfooter" data-bs-theme="dark">
+    <div class="container position-relative mt-sm-5">
+        <div class="row g-3 g-md-4 align-items-center">
+            <div class="col-md-8 col-xl-6 text-center text-md-start">
+                <h2 class="display-6 fw-semibold mb-md-3 text-white">Hagamos avanzar tu carrera</h2>
+            </div>
+            <div class="col-md-4 text-center text-md-end ms-auto">
+                <a href="contactUs.html" class="icon-xxl bg-primary btn-white-hover rounded-circle btn small fw-normal text-white p-0">¡Contactanos!</a>
+            </div>
+        </div>
+        <hr class="opacity-1 mt-4 mb-3">
+        <div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-3">
+            <a class="navbar-brand" href="index.html">
+                <img class="navbar-brand-item h-40px" src="media/mainlogo White.svg" alt="logo">
+            </a>
+            <div class="text-body mt-3 mt-md-0"> Copyrights ©2024 Get me a job.</div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+	<script src="js/authentication.js"></script>
+  </body>
+</html>
