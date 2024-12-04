@@ -43,7 +43,7 @@ async function login(correo, contrasena) {
       }
   
     const data = await response.json();
-    localStorage.setItem('user', JSON.stringify(data.userData));
+    localStorage.setItem('loggedInUser', JSON.stringify(data.userData));
     window.location.href = 'index.html';
     } catch (error) {
         Swal.fire({

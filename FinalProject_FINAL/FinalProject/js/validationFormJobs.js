@@ -1,7 +1,7 @@
 const formFile = document.getElementById("formFile")
 let formFileName;
 document.addEventListener('DOMContentLoaded', function() {
-    const userData = JSON.parse(localStorage.getItem('user'));
+    const userData = JSON.parse(localStorage.getItem('loggedInUser'));
 
     if (userData) {
         document.getElementById('contact-form').style.display = 'block';
@@ -59,9 +59,10 @@ const form = document.getElementById('myForm');
             const telefono = document.getElementById("phone").value
             const mensaje = document.getElementById("message").value
             const trabajo = JSON.parse(localStorage.getItem('trabajo'))
-            const postulacion = {
-                idPostulacion:trabajo._id,nombre,correo,telefono,mensaje,cv:formFileName,
-            }
+           const cv = formFileName
+           const idPostulacion = trabajo._id
+            const postulacion = new Aplicacion(idPostulacion,nombre,correo,telefono,cv,mensaje)
+console.log(postulacion)
             agregarPostulacion(postulacion)
             Swal.fire({
                 toast: true,

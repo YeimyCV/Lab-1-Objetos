@@ -1,4 +1,7 @@
-document.getElementById('signupBtn').addEventListener('click', function() {
+let userData;
+document.getElementById('signupBtn').addEventListener('click', function(event) {
+    event.preventDefault(); 
+
     const nameInput = document.getElementById('signupName');
     const surnameInput = document.getElementById('signupsurName');
     const phoneInput = document.getElementById('signupPhone');
@@ -9,6 +12,7 @@ document.getElementById('signupBtn').addEventListener('click', function() {
 
     let isValid = true;
 
+    // Reset validation states
     nameInput.classList.remove('is-invalid');
     surnameInput.classList.remove('is-invalid');
     phoneInput.classList.remove('is-invalid');
@@ -17,6 +21,7 @@ document.getElementById('signupBtn').addEventListener('click', function() {
     confirmPasswordInput.classList.remove('is-invalid');
     termsCheckbox.classList.remove('is-invalid');
 
+    // Validation logic
     if (!nameInput.value) {
         nameInput.classList.add('is-invalid');
         isValid = false;
@@ -52,28 +57,45 @@ document.getElementById('signupBtn').addEventListener('click', function() {
         isValid = false;
     }
 
-    if (isValid) {
-        const userData = {
-            name: `${nameInput.value} ${surnameInput.value}`,
-            email: emailInput.value,
-            password: passwordInput.value,
-            phone:phoneInput.value
-        };
-        
-        registrarUsuario(userData);
+      // Determine userType based on radio selection
+      let userType = null;
+      if (document.getElementById('btnradio1').checked) {
+          userType = "Empleado";  // "Empleado"
+      } else if (document.getElementById('btnradio2').checked) {
+          userType = "Empleador"; // "Empleador"
+      } else if (document.getElementById('btnradio3').checked) {
+          userType = "Admin";     // "Admin"
+      }
 
-        
+      if (!userType) {
+        alert("Por favor, selecciona un tipo de cuenta.");
+        isValid = false;
+    }
+
+    if (isValid) {   
+        if(  userType == "Empleado" ){
+          userData = new Empleado(`${nameInput.value} ${surnameInput.value}`,emailInput.value,passwordInput.value,phoneInput.value,userType)
+        } 
+        else if(userType == "Empleador"){
+          userData = new Empleador(`${nameInput.value} ${surnameInput.value}`,emailInput.value,passwordInput.value,phoneInput.value,userType)
+      
+        } 
+        else {
+         userData = new Administrador(`${nameInput.value} ${surnameInput.value}`,emailInput.value,passwordInput.value,phoneInput.value,userType)
+      
+        }
+        registrarUsuario();
     }
 });
 
-async function registrarUsuario(datosUsuario){
+async function registrarUsuario(){
      const url = 'http://localhost:5000/registrarUsuario'
   const usuario = {
-    nombre: datosUsuario.name,
-    contrasena: datosUsuario.password,
-    correo: datosUsuario.email,
-    telefono:datosUsuario.phone,
-    rol: "usuario",
+    nombre: userData.getNombre(),
+    contrasena: userData.getContrasena(),
+    correo: userData.getCorreo(),
+    telefono:userData.getTelefono(),
+    rol: userData.getRol(),
   };
 
   try {
@@ -113,3 +135,5 @@ async function registrarUsuario(datosUsuario){
     });
   }
 }
+
+

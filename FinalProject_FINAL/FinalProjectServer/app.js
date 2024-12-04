@@ -93,7 +93,7 @@ app.get('/user/:id', async (req, res) => {
 
 // Ruta para actualizar usuario
 app.post('/actualizarUsuario', async (req, res) => {
-  const { nombre, contrasena, correo, telefono,rol } = req.body;
+  const { nombre, correo, contrasena,telefono,rol } = req.body;
 
   try {
     const filter = { correo: correo }; // Asegúrate de usar ObjectId si tu _id es de tipo ObjectId
@@ -128,17 +128,54 @@ app.get('/todosTrabajos', async (req, res) => {
 });
 // Ruta para agregar un trabajo
 app.post('/agregarTrabajo', async (req, res) => {
-  const { titulo, salario, ubicacion, modalidad, descripcion, categoria, empleadorId } = req.body;
+  const { 
+    publishBy, 
+    title, 
+    company, 
+    location, 
+    city, 
+    country, 
+    type, 
+    categoria, 
+    salary, 
+    habilidades, 
+    responsabilidades, 
+    experiencia, 
+    url,
+    requisitosEducativos, 
+    descripcion 
+  } = req.body;
 
   try {
     const nuevoTrabajo = {
-      titulo,
-      salario,
-      ubicacion,
-      modalidad,
+      publishBy: new ObjectId(publishBy), 
+      title, 
+      company, 
+      location, 
+      city, 
+      country, 
+      type, 
+      categoria, 
+      salary, 
+      url, 
+      habilidades: {
+        habilidad1: habilidades.habilidad1,
+        habilidad2: habilidades.habilidad2,
+        habilidad3: habilidades.habilidad3,
+        habilidad4: habilidades.habilidad4,
+      },
+      responsabilidades: {
+        responsabilidad1: responsabilidades.responsabilidad1,
+        responsabilidad2: responsabilidades.responsabilidad2,
+        responsabilidad3: responsabilidades.responsabilidad3,
+      },
+      experiencia: {
+        experiencia1: experiencia.experiencia1,
+      },
+      requisitosEducativos: {
+        requisitoEducativo1: requisitosEducativos.requisitoEducativo1,
+      },
       descripcion,
-      categoria,
-      empleadorId,
       postulaciones: [],
     };
 
@@ -149,7 +186,7 @@ app.post('/agregarTrabajo', async (req, res) => {
       trabajo: { _id: result.insertedId, ...nuevoTrabajo },
     });
   } catch (err) {
-    res.status(500).json({ error: 'Error al agregar el trabajo', details: err });
+    res.status(500).json({ error: 'Error al agregar el trabajo', details: err.message });
   }
 });
 
@@ -488,6 +525,101 @@ app.post('/trabajo', async (req, res) => {
   }
 });
 
+app.get('/trabajosPorPublicador/:publishBy', async (req, res) => {
+  const { publishBy } = req.params;
+
+  try {
+    const trabajos = await worksCollection
+      .find({ publishBy: new ObjectId(publishBy) }) // Buscar por publishBy
+      .toArray();
+
+    if (trabajos.length === 0) {
+      return res.status(404).json({ message: 'No se encontraron trabajos para este publicador.' });
+    }
+
+    res.status(200).json(trabajos);
+  } catch (err) {
+    console.error('Error al obtener trabajos:', err);
+    res.status(500).json({ error: 'Error al obtener trabajos', details: err.message });
+  }
+});
+
+// Ruta para eliminar trabajo por ID
+app.delete('/eliminarTrabajo/:id', async (req, res) => {
+  const { id } = req.params; // Obtén el ID del parámetro de la URL
+
+  try {
+    // Convertir el ID a ObjectId
+    const objectId = new ObjectId(id);
+
+    // Elimina el trabajo que coincida con el _id
+    const result = await worksCollection.deleteOne({ _id: objectId });
+
+    if (result.deletedCount > 0) {
+      res.status(200).json({
+        message: 'Trabajo eliminado correctamente',
+      });
+    } else {
+      res.status(404).json({
+        message: 'No se encontró ningún trabajo con el ID especificado',
+      });
+    }
+  } catch (err) {
+    res.status(500).json({ error: 'Error al eliminar el trabajo', details: err });
+  }
+});
+
+app.post('/editarTrabajo', async (req, res) => {
+  const { id, updatedData } = req.body; // Obtén el ID del parámetro de la URL
+  // Los nuevos datos para el trabajo
+
+  try {
+    console.log(updatedData)
+    const objectId = new ObjectId(id);
+    // Actualiza el trabajo con el nuevo contenido
+    const result = await worksCollection.updateOne(
+      { _id: objectId}, // Filtro por _id
+      { $set: updatedData } // Nuevos datos
+    );
+
+    if (result.modifiedCount > 0) {
+      res.status(200).json({
+        message: 'Trabajo editado correctamente',
+      });
+    } else {
+      res.status(404).json({
+        message: 'No se encontró ningún trabajo con el ID especificado o no se hicieron cambios',
+      });
+    }
+  } catch (err) {
+    res.status(500).json({ error: 'Error al editar el trabajo', details: err });
+  }
+});
+
+// Ruta para obtener trabajo por ID
+app.get('/trabajo/:id', async (req, res) => {
+  const { id } = req.params; // Obtén el ID del parámetro de la URL
+
+  try {
+    // Convertir el ID a ObjectId
+    const objectId = new ObjectId(id);
+
+    // Buscar el trabajo en la colección
+    const trabajo = await worksCollection.findOne({ _id: objectId });
+
+    if (trabajo) {
+      res.status(200).json(trabajo); // Si se encuentra el trabajo, lo devuelve
+    } else {
+      res.status(404).json({
+        message: 'No se encontró ningún trabajo con el ID especificado', // Si no se encuentra el trabajo
+      });
+    }
+  } catch (err) {
+    res.status(500).json({ error: 'Error al obtener el trabajo', details: err }); // Error en la consulta
+  }
+});
+
+
 // Ruta para agregar una postulacion a un trabajo
 app.post('/agregarPostulacion', async (req, res) => {
   const { idPostulacion, nombre,correo,telefono,cv,mensaje  } = req.body;
@@ -506,6 +638,23 @@ app.post('/agregarPostulacion', async (req, res) => {
   }
 });
 
+app.get('/postulacionesPorCorreo/:correo', async (req, res) => {
+  const { correo } = req.params;
+
+  try {
+    // Busca documentos donde el correo esté dentro del array `postulaciones`
+    const trabajos = await worksCollection.find({
+      postulaciones: { $elemMatch: { correo } },
+    }).toArray();
+
+    res.status(200).json(trabajos);
+  } catch (err) {
+    res.status(500).json({
+      error: 'Error al obtener los trabajos',
+      details: err.message,
+    });
+  }
+});
 // ------Trabajos-----------------------------------------------------------------------------------------
 
 // Puerto de escucha

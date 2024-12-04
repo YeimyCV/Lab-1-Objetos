@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch userType from loggedInUser in localStorage
-    const userType = JSON.parse(localStorage.getItem('loggedInUser'))?.userType;
+    const userType = JSON.parse(localStorage.getItem('loggedInUser'))?.rol;
 
     // Select the navigation links
     const profileLink = document.querySelector('a[href="account.html"]');
